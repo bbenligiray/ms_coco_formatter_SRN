@@ -1,0 +1,8 @@
+train2014/
+val2014/
+
+train2014.zip
+val2014.zip
+
+*.pyc
+*.h5
