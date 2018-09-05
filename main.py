@@ -11,7 +11,7 @@ from calculate_mean import calculate_mean
 
 def main():
 	# clean up
-	"""for dir_name in ['train2014', 'val2014']:
+	for dir_name in ['train2014', 'val2014']:
 		if os.path.isdir(dir_name):
 			shutil.rmtree(dir_name)
 
@@ -25,7 +25,7 @@ def main():
 			os.system('wget -t0 -c ' + dataset_link)
 		#extract the downloaded file
 		with zipfile.ZipFile(file_name) as zf:
-			zf.extractall()"""
+			zf.extractall()
 	
 	with open('cats') as f:
 		cats = f.read().split('\n')
