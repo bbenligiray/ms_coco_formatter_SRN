@@ -1,5 +1,6 @@
 import os
 import h5py
+import zipfile
 
 import numpy as np
 from PIL import Image
@@ -10,7 +11,7 @@ from calculate_mean import calculate_mean
 
 def main():
 	# clean up
-	for dir_name in ['train2014', 'val2014']:
+	"""for dir_name in ['train2014', 'val2014']:
 		if os.path.isdir(dir_name):
 			shutil.rmtree(dir_name)
 
@@ -24,7 +25,7 @@ def main():
 			os.system('wget -t0 -c ' + dataset_link)
 		#extract the downloaded file
 		with zipfile.ZipFile(file_name) as zf:
-			zf.extractall()
+			zf.extractall()"""
 	
 	with open('cats') as f:
 		cats = f.read().split('\n')
@@ -49,7 +50,7 @@ def main():
 				image_names_raw = f.read().splitlines()
 			with open(os.path.join('coco', 'coco_train_label.txt')) as f:
 				labels_raw = f.read().splitlines()
-		elif data_type == 'test':
+		elif data_type == 'val':
 			with open(os.path.join('coco', 'coco_test_imglist.txt')) as f:
 				image_names_raw = f.read().splitlines()
 			with open(os.path.join('coco', 'coco_test_label.txt')) as f:
